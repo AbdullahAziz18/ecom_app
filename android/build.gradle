@@ -1,0 +1,32 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // Ensure the correct Kotlin version is used to avoid conflicts
+    configurations.all {
+        resolutionStrategy {
+            // Force Kotlin 1.9.0 to resolve any version mismatch issues
+            force 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0'
+        }
+    }
+}
+
+rootProject.buildDir = "../build"
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+// Enable AndroidX and Jetifier for backward compatibility with older libraries
+gradle.rootProject {
+    ext["android.useAndroidX"] = true
+    ext["android.enableJetifier"] = true
+}

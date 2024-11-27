@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090525350625",
+    "project_id": "mehsimbhai-609b3",
+    "storage_bucket": "mehsimbhai-609b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090525350625:android:5f4559c8544029e78005a0",
+        "android_client_info": {
+          "package_name": "com.example.ecom_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBPPd_Hv08m6rXJfJs1a08VdBUatkDybw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
